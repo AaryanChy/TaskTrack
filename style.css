@@ -1,0 +1,32 @@
+:root {
+  --main-color: #93d6f552;
+  --primary-light: #adffff;
+  --primary-dark: #091034;
+  --gray: #f9fbff;
+  --background: #060b23;
+  --box-size: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.322) 0px 3px 8px;
+  background-color: var(--main-color);
+  border-radius: 25px;
+  margin-top: 25px;
+  padding: 20px;
+}
