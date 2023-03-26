@@ -19,14 +19,20 @@ button.addEventListener("click", (e) => {
     <h1>${input.value}</h1>
     </div>
     <div class="buttonSection">
-    <button class="button"><?xml version="1.0" ?><svg height="25" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M12 38c0 2.21 1.79 4 4 4h16c2.21 0 4-1.79 4-4v-24h-24v24zm26-30h-7l-2-2h-10l-2 2h-7v4h28v-4z"/><path d="M0 0h48v48h-48z" fill="none"/></svg></button>
+    <button class="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7e1c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></button>
    
 
     </div>
+    
        </div>`;
-    const card = section.lastChild;
-    card.classList.add("animate");
-    storeTask();
+
+    const card = document.querySelectorAll(".card");
+    card.forEach((item) => {
+      setTimeout(() => {
+        item.style.opacity = 1;
+      }, 100);
+    });
+
     input.value = "";
     errorMessage.innerHTML = "";
 

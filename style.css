@@ -87,6 +87,12 @@ body {
   margin-top: 25px;
   padding: 20px;
   overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  width: 550px;
 }
 
 .card.animate {
@@ -109,12 +115,13 @@ body {
   font-family: inherit;
   font-size: large;
   cursor: pointer;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  background-color: #e3fafa;
 }
 
 .add:hover {
   width: 25%;
-  background-color: #adffff;
+  background-color: var(--main-color);
   color: #060b23;
 }
 
