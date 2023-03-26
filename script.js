@@ -25,12 +25,13 @@ button.addEventListener("click", (e) => {
     </div>
     
        </div>`;
+    storeTask();
 
-    const card = document.querySelectorAll(".card");
+    const card = document.querySelectorAll(".card ");
     card.forEach((item) => {
       setTimeout(() => {
         item.style.opacity = 1;
-      }, 100);
+      }, 50);
     });
 
     input.value = "";
@@ -46,6 +47,7 @@ button.addEventListener("click", (e) => {
           const card = button.closest(".card");
           if (card) {
             card.remove();
+
             storeTask();
           }
         }
