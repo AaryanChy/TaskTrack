@@ -79,13 +79,28 @@ body {
 .card {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: auto;
+  justify-content: space-between;
+  transition: transform 2s ease-in-out;
+  width: 500px;
   background-color: var(--main-color);
   border-radius: 25px;
   margin-top: 25px;
   padding: 20px;
+  overflow: hidden;
 }
+
+.card.animate {
+  transform: scale(1);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .add {
   width: 15%;
   height: 45px;
@@ -93,4 +108,18 @@ body {
   border-radius: 5px;
   font-family: inherit;
   font-size: large;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+}
+
+.add:hover {
+  width: 25%;
+  background-color: #adffff;
+  color: #060b23;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
